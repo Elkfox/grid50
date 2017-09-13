@@ -1,0 +1,165 @@
+/*==============================================================================
+  ___  _   _    _
+ /   || | | |  | |
+ \__  | | | |  | |  __
+ /    |/  |/_) |/  /  \_/\/
+ \___/|__/| \_/|__/\__/  /\_/
+               |\
+               |/
+  Concrete v0.1
+  https://elkfox.com
+  https://experts.shopify.com/elkfox
+  Copyright 2015 Shopify Inc. & Elkfox Co Pty Ltd
+==============================================================================*/
+
+/* Variables =================================================================*/
+
+// Screen Sizes
+$s: 768px;
+$m: 992px;
+$l: 1200px;
+
+// Space & Borders
+$gutter: 50px;
+
+/* Mixins ====================================================================*/
+
+// Screen Sizes & Types
+@mixin s() {
+  @media (max-width: $s) {
+    @content;
+  }
+}
+@mixin m() {
+  @media (min-width: $s) and (max-width: $l - 1px) {
+    @content;
+  }
+}
+@mixin l() {
+  @media (min-width: $l) {
+    @content;
+  }
+}
+@mixin xl() {
+  @media (min-width: $xl) {
+    @content;
+  }
+}
+
+// Reverse Grids
+@mixin reverse() {
+  direction: rtl;
+  .column {
+    direction: ltr;
+    float: right;
+  }
+}
+
+/* Grid System ===============================================================*/
+
+.container {
+  max-width: 100%;
+  width: 100%;
+  margin: auto;
+  padding: 0 $gutter;
+  &.l {
+    width: $l;
+  }
+  &.m {
+    width: $m;
+  }
+  &.s {
+    width: $s;
+  }
+  @include s() {
+    padding: 0 $gutter/2;
+  }
+}
+
+// Rows
+.row {
+  margin: 0 (-$gutter/2) $gutter;
+  // Column Grid
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  &.collapsed {
+    margin: 0 !important;
+    .column {
+      padding: 0;
+    }
+  }
+}
+
+// Column Grid
+.column {
+  float: left;
+  min-height: 0.125rem;
+  padding: 0 $gutter/2;
+}
+@for $i from 1 through 12 {
+  .column.l#{$i} {
+    width: percentage($i/12);
+  }
+}
+@include m() {
+  @for $i from 1 through 12 {
+    .column.m#{$i} {
+      width: percentage($i/12);
+    }
+  }
+}
+@include s() {
+  @for $i from 1 through 12 {
+    .column.s#{$i} {
+      width: percentage($i/12);
+    }
+  }
+}
+
+// Uniform Height Clearing
+@include l() {
+  .column.l2:nth-child(6n+1) { clear: both; }
+  .column.l3:nth-child(4n+1) { clear: both; }
+  .column.l4:nth-child(3n+1) { clear: both; }
+  .column.l6:nth-child(2n+1) { clear: both; }
+}
+@include m() {
+  .column.m2:nth-child(6n+1) { clear: both; }
+  .column.m3:nth-child(4n+1) { clear: both; }
+  .column.m4:nth-child(3n+1) { clear: both; }
+  .column.m6:nth-child(2n+1) { clear: both; }
+}
+@include s() {
+  .column.s2:nth-child(6n+1) { clear: both; }
+  .column.s3:nth-child(4n+1) { clear: both; }
+  .column.s4:nth-child(3n+1) { clear: both; }
+  .column.s6:nth-child(2n+1) { clear: both; }
+}
+
+// Grid helpers
+@include l() {
+  .l-hide { display: none !important; }
+  .l-left { text-align: left; }
+  .l-center { text-align: center; }
+  .l-right { text-align: right; }
+  .xl-show, .m-show, .s-show { display: none !important; }
+}
+@include m() {
+  .m-hide { display: none !important; }
+  .m-left { text-align: left; }
+  .m-center { text-align: center; }
+  .m-right { text-align: right; }
+  .l-show { display: none !important; }
+  .l-show, .s-show { display: none !important; }
+}
+@include s() {
+  .s-hide { display: none !important; }
+  .s-left { text-align: left; }
+  .s-center { text-align: center; }
+  .s-right { text-align: right; }
+  .l-show { display: none !important; }
+  .l-show, .m-show { display: none !important; }
+}
