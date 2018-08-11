@@ -10,19 +10,19 @@ Or install manually by including the relevant files as needed.
 
 ## Components
 
-* grid50.scss - an optional quick starter project file that pulls together all of the grid50 elements
-* grid50.columns - a traditional column based grid - required for basic usage
-* grid50.variables - mixins used by grid50 - required for basic usage
-* grid50.mixins - mixins used by grid50 - required for basic usage
-* grid50.reset - takes control of common elements to ensure styling is as congruently raw and flexible as possible - optional but highly recommended
-* grid50.flex - adds a lightweight flex grid - optional
-* grid50.table - adds a suprisingly useful table styled grid that can be used in place of flex grids - quite optional
-* grid50.helpers - gives you handy tools to make building UIs ridiculously easy - optional
-* grid50.forms - basic form elements - optional
-* grid50.typography - basic typographic elements - very optional
-* grid50.media - basic media styling for modern responsive UIs - very optional
-* grid50.animation - variables, mixins and some basic styling, for animation - particularly optional
-* grid50.social - helpers for social media elements - super optional
+* <b>grid50.scss</b> - an optional quick starter project file that pulls together all of the grid50 elements
+* <b>grid50.columns.scss</b> - a traditional column based grid - required for basic usage
+* <b>grid50.variables.scss</b> - mixins used by grid50 - required for basic usage
+* <b>grid50.mixins.scss</b> - mixins used by grid50 - required for basic usage
+* <b>grid50.reset.scss</b> - takes control of common elements to ensure styling is as congruently raw and flexible as possible - optional but highly recommended
+* <b>grid50.flex.scss</b> - adds a lightweight flex grid - optional
+* <b>grid50.table.scss</b> - adds a suprisingly useful table styled grid that can be used in place of flex grids - quite optional
+* <b>grid50.helpers.scss</b> - gives you handy tools to make building UIs ridiculously easy - optional
+* <b>grid50.forms.scss</b> - basic form elements - optional
+* <b>grid50.typography.scss</b> - basic typographic elements - very optional
+* <b>grid50.media.scss</b> - basic media styling for modern responsive UIs - very optional
+* <b>grid50.animation.scss</b> - variables, mixins and some basic styling, for animation - particularly optional
+* <b>grid50.social.scss</b> - helpers for social media elements - super optional
 
 ## Other resources
 
