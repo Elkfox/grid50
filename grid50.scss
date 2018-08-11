@@ -6,23 +6,23 @@
  \___/|__/| \_/|__/\__/  /\_/
                |\
                |/
-  Grid50 v0.5.4
+  Grid50 v0.5.5
   Copyright 2015 Elkfox Co Pty Ltd
   https://elkfox.com
 ==============================================================================*/
 
-@import url('grid50.reset');
-@import url('grid50.variables');
-@import url('grid50.mixins');
-@import url('grid50.columns');
-@import url('grid50.flex');
-@import url('grid50.table');
-@import url('grid50.helpers');
-@import url('grid50.typography');
-@import url('grid50.media');
-@import url('grid50.forms');
-@import url('grid50.social');
-@import url('grid50.animation');
+@import 'grid50.reset';
+@import 'grid50.variables';
+@import 'grid50.mixins';
+@import 'grid50.columns';
+@import 'grid50.flex';
+@import 'grid50.table';
+@import 'grid50.helpers';
+@import 'grid50.typography';
+@import 'grid50.media';
+@import 'grid50.forms';
+@import 'grid50.social';
+@import 'grid50.animation';
 
 /* Basic Grid50 Layout =======================================================*/
 
