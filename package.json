@@ -3,6 +3,7 @@
   "version": "0.5.1",
   "description": "A super fast and flexible grid system",
   "main": "grid50.scss",
+  "style": "grid50.scss",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

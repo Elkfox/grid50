@@ -27,7 +27,8 @@ Or install manually by including the relevant files as needed.
 ## Other resources
 
 * Github - https://github.com/Elkfox/grid50
-* <s>Docs - https://grid50.com</s>
+* <s>Demo - https://grid50.com</s>
+* Docs - <s>https://github.com/Elkfox/grid50/wiki</s>
 * NPM - https://www.npmjs.com/package/grid50
 
 ## License
