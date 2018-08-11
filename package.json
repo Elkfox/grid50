@@ -1,6 +1,6 @@
 {
   "name": "grid50",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "A super fast and flexible grid system",
   "main": "grid50.scss",
   "scripts": {
