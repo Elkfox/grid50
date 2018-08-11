@@ -1,0 +1,91 @@
+/**
+* Styles for social media sharing buttons
+*
+* Requirements: none
+*
+* Usage: ensure sharing buttons have the 'button' class, and that any SVGs in
+*        those buttons have the 'icon' class
+*
+* To do: convert styles into a forloop with variables
+**/
+
+/* Social Sharing Variables ==================================================*/
+
+$colorFacebook: #3b5998;
+$colorTwitter: #00aced;
+$colorPinterest: #cb2027;
+$colorFancy: #4999dc;
+$colorGoogle: #dd4b39;
+
+/* Social Sharing Button Styles ==============================================*/
+
+.facebook {
+  &.button {
+    background-color: $colorBodyBackground;
+    border-color: $colorFacebook;
+    color: $colorFacebook;
+    &:hover {
+      background-color: $colorFacebook;
+      color: $colorBodyBackground;
+    }
+  }
+  &.icon {
+    fill : $colorFacebook;
+  }
+}
+.twitter {
+  &.button {
+    background-color: $colorBodyBackground;
+    border-color: $colorTwitter;
+    color: $colorTwitter;
+    &:hover {
+      background-color: $colorTwitter;
+      color: $colorBodyBackground;
+    }
+  }
+  &.icon {
+    fill: $colorTwitter;
+  }
+}
+.pinterest {
+  &.button {
+    background-color: $colorBodyBackground;
+    border-color: $colorPinterest;
+    color: $colorPinterest;
+    &:hover {
+      background-color: $colorPinterest;
+      color: $colorBodyBackground;
+    }
+  }
+  &.icon {
+    fill: $colorPinterest;
+  }
+}
+.fancy {
+  &.button {
+    background-color: $colorBodyBackground;
+    border-color: $colorFancy;
+    color: $colorFancy;
+    &:hover {
+      background-color: $colorFancy;
+      color: $colorBodyBackground;
+    }
+  }
+  &.icon {
+    fill: $colorFancy;
+  }
+}
+.google {
+  &.button {
+    background-color: $colorBodyBackground;
+    border-color: $colorGoogle;
+    color: $colorGoogle;
+    &:hover {
+      background-color: $colorGoogle;
+      color: $colorBodyBackground;
+    }
+  }
+  &.icon {
+    fill: $colorGoogle;
+  }
+}

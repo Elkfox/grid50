@@ -1,0 +1,43 @@
+/* Grid50 Media Element Styling ==============================================*/
+
+/**
+* Simple Responsive Images & iFrames
+**/
+
+figure {
+  margin: 0;
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+/**
+* Responsive iFrame Videos
+*
+* Usage: Wrap your iFrames in a div with the class 'iframe-video'
+**/
+
+.iframe-video {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  height: 0;
+  height: auto;
+  // 16:9 (standard video ratio)
+  padding-bottom: 56.25%;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

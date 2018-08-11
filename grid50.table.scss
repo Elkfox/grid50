@@ -1,0 +1,26 @@
+/**
+* Requirements: grid50.variables.scss, grid50.columns.scss
+*
+* Usage: adding the table class to column rows makes columns behave like tables
+*
+* To do: convert rules to a forloop that inherits global mobile/desktop first
+*        preferences
+**/
+
+.row {
+  &.table {
+    @include table();
+  }
+  &.xl-table {
+    @include xl() { @include table(); }
+  }
+  &.l-table {
+    @include l() { @include table(); }
+  }
+  &.m-table {
+    @include m() { @include table(); }
+  }
+  &.s-table {
+    @include s() { @include table(); }
+  }
+}

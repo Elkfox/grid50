@@ -1,0 +1,48 @@
+/* Variables =================================================================*/
+
+/**
+* Spacing
+**/
+$gutter: 50px;
+$spacing: 10px;
+
+/**
+* Screen Sizes
+**/
+$s: 600px;
+$m: 850px;
+$l: 1150px;
+$xl: 1450px;
+
+/**
+* Colors
+**/
+$colorBodyBackground: #F8F8F8;
+$colorBrand: #5611E1;
+$colorText: #222222;
+$colorBorder: #D5D5D5;
+$colorAlternate: #F26968;
+
+/**
+* Typography
+**/
+$fontBaseSize: 16px;
+$fontBaseLineHeight: 1.5;
+$fontBaseLight: 300;
+$fontBaseNormal: 400;
+$fontBaseBold: 700;
+// Body
+$fontBodyFamily: sans-serif;
+$fontBodyBaseWeight: $fontBaseNormal;
+$fontBodyBoldWeight: $fontBaseBold;
+$fontBodyLightWeight: $fontBaseLight;
+// Headings
+$fontHeadingFamily: sans-serif;
+$fontHeadingBaseWeight: $fontBaseBold;
+
+/**
+* Borders
+**/
+$borderWeight: 1px;
+$borderStyle: solid;
+$borderRadius: 2px;

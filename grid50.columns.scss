@@ -1,0 +1,134 @@
+/**
+* Requirements: grid50.variables.scss
+**/
+
+/* Column Grid Variables =====================================================*/
+
+$columns: 12;
+
+/* Column Grid Mixins ========================================================*/
+
+/**
+* Screen sizes
+**/
+@mixin s() {
+  @media (max-width: $s) { @content; }
+}
+@mixin s-m() {
+  @media (max-width: $l - 1px) { @content; }
+}
+@mixin m() {
+  @media (min-width: $s + 1px) and (max-width: $l - 1px) { @content; }
+}
+@mixin m-l() {
+  @media (min-width: $s + 1px) and (max-width: $xl) { @content; }
+}
+@mixin l() {
+  @media (min-width: $l) { @content; }
+}
+@mixin m-xl() {
+  @media (min-width: $s + 1px) { @content; }
+}
+@mixin xl() {
+  @media (min-width: $xl) { @content; }
+}
+
+/**
+* Column widths
+**/
+@mixin column($width) {
+  width: $width;
+}
+
+/* Grid50 Columns ============================================================*/
+
+/**
+* Containers
+**/
+.container {
+  max-width: 100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $gutter;
+  padding-right: $gutter;
+  &.xl {
+    max-width: $xl;
+  }
+  &.l {
+    max-width: $l;
+  }
+  &.m {
+    max-width: $m;
+  }
+  &.s {
+    max-width: $s;
+  }
+  @include s() {
+    padding-left: $gutter/2;
+    padding-right: $gutter/2;
+  }
+}
+
+/**
+* Rows
+**/
+.row {
+  margin-left: -($gutter/2);
+  margin-right: -($gutter/2);
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  &.collapse {
+    margin-left: 0;
+    margin-right: 0;
+    .column {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+/**
+* Columns
+**/
+.column {
+  float: left;
+  min-height: 0.125rem;
+  padding-left: $gutter/2;
+  padding-right: $gutter/2;
+  @for $i from 1 through $columns {
+    &.l#{$i} { @include column(percentage($i/$columns)); }
+  }
+  @include m() {
+    @for $i from 1 through $columns {
+      &.m#{$i} { @include column(percentage($i/$columns)); }
+    }
+  }
+  @include s() {
+    @for $i from 1 through $columns {
+      &.s#{$i} { @include column(percentage($i/$columns)); }
+    }
+  }
+  // Uniform Height Clearing
+  @include l() {
+    &:nth-child(6n+1).l2 { clear: both; }
+    &:nth-child(4n+1).l3 { clear: both; }
+    &:nth-child(3n+1).l4 { clear: both; }
+    &:nth-child(2n+1).l6 { clear: both; }
+  }
+  @include m() {
+    &:nth-child(6n+1).m2 { clear: both; }
+    &:nth-child(4n+1).m3 { clear: both; }
+    &:nth-child(3n+1).m4 { clear: both; }
+    &:nth-child(2n+1).m6 { clear: both; }
+  }
+  @include s() {
+    &:nth-child(6n+1).s2 { clear: both; }
+    &:nth-child(4n+1).s3 { clear: both; }
+    &:nth-child(3n+1).s4 { clear: both; }
+    &:nth-child(2n+1).s6 { clear: both; }
+  }
+}
