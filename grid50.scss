@@ -10,18 +10,20 @@
   https://elkfox.com
 ==============================================================================*/
 
-@import './grid50.reset';
-@import './grid50.variables';
-@import './grid50.mixins';
-@import './grid50.columns';
-@import './grid50.flex';
-@import './grid50.table';
-@import './grid50.helpers';
-@import './grid50.typography';
-@import './grid50.media';
-@import './grid50.forms';
-@import './grid50.social';
-@import './grid50.animation';
+@charset 'utf-8'
+
+@import 'grid50/_grid50.reset';
+@import 'grid50/_grid50.variables';
+@import 'grid50/_grid50.mixins';
+@import 'grid50/_grid50.columns';
+@import 'grid50/_grid50.flex';
+@import 'grid50/_grid50.table';
+@import 'grid50/_grid50.helpers';
+@import 'grid50/_grid50.typography';
+@import 'grid50/_grid50.media';
+@import 'grid50/_grid50.forms';
+@import 'grid50/_grid50.social';
+@import 'grid50/_grid50.animation';
 
 /* Basic Grid50 Layout =======================================================*/
 
