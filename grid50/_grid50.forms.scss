@@ -171,7 +171,6 @@ input[type="checkbox"] {
       color: $colorBodyBackground;
       text-align: center;
       vertical-align: top;
-      @include transition();
     }
   }
   &:checked {
