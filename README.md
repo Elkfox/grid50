@@ -6,6 +6,8 @@ A super easy to use and super flexible scss layout framework
 
 `$ npm install grid50`
 
+`@import '~grid50/grid50/_grid50.variables.scss';` ..etc
+
 Or install manually by including the relevant files as needed.
 
 ## Components
